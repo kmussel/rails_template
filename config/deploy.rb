@@ -26,6 +26,7 @@ set :use_sudo, false
 set :keep_releases, 3
 set :user, "deploy"
 
+set :bundle_flags, '--quiet'                       # this is default
 # after 'deploy:updated',  'deploy:link_tmp'
 
 namespace :deploy do

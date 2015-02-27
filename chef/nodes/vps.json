@@ -17,7 +17,7 @@
      "notify_email"     : "user@example.com",
      "poll_period"      : "60",
      "poll_start_delay" : "120",
-     "address" : "162.243.160.131",
+     "address" : "104.236.235.161",
      "allow" : ["0.0.0.0/0.0.0.0"],
      "unicorn": {"pid_dir": "/home/deploy/rails_template/shared/tmp/pids"},
      "resque": {

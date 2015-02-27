@@ -46,7 +46,8 @@ end
 bash "insert_line" do
   user "deploy"
   code <<-EOS  
-    echo "for f in ~/.bash_profile_*; do source $f; done" >> /home/#{node['user']['name']}/.bash_profile
+    echo "PATH=\"$(ruby -e 'print Gem.user_dir')/bin:$PATH\"" >> /home/#{node['user']['name']}/.bash_profile
+    echo "for f in ~/.bash_profile_*; do source '$f'; done" >> /home/#{node['user']['name']}/.bash_profile
   EOS
-  not_if "grep -q 'for f in ~/.bash_profile_*; do source $f; done' /home/#{node['user']['name']}/.bash_profile"
+  not_if "grep -q 'for f in ~/.bash_profile_*; do source' /home/#{node['user']['name']}/.bash_profile"
 end
