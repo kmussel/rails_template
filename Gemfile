@@ -10,9 +10,9 @@ gem 'capistrano', '~> 3.3.0'
 # gem 'capistrano-knife-solo'
 gem 'capistrano-rails'
 gem 'capistrano-rvm'
-gem 'berkshelf'
-gem 'chef'
-gem 'knife-solo'
+# gem 'berkshelf'
+# gem 'chef'
+# gem 'knife-solo'
 
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'

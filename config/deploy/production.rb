@@ -5,7 +5,7 @@
 # property set.  Don't declare `role :all`, it's a meta role.
 
 set :stage, :production
-set :branch, 'deploy'
+set :branch, 'master'
 # role :all, %w{appname.com}
 
 # role :app, %w{deploy@example.com}
@@ -20,7 +20,7 @@ set :branch, 'deploy'
 # used to set extended properties on the server.
 
 server '104.236.235.161', user: 'deploy', roles: %w{app}, my_property: :my_value, ssh_options: {
-   keys: %w(/Users/username/.ssh/id_rsa),
+   keys: %w(/Users/kmussel/.ssh/paid_services),
    forward_agent: true
    # auth_methods: %w(password)
  }
