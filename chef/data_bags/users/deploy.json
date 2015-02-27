@@ -1,0 +1,15 @@
+{
+    "id": "deploy",
+    "password": "$1$QZEvUSHD$JFgJ4jeie0ijUhXa7vqfe.",
+    "groups": [
+        "web"
+    ],
+    "ssh_keys": [
+     
+    ],
+    "env":{
+      "DATABASE_URL": "postgres://postgres:test@127.0.0.1/rails_template_production",
+      "REDIS_URL": "redis://localhost:6379/0"
+    }
+    
+}

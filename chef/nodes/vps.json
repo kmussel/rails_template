@@ -1,0 +1,37 @@
+{
+  "run_list": [
+    "role[web]",
+    "recipe[vps]",
+    "recipe[vps::users]",
+    "recipe[rvm::user]",    
+    "recipe[vps::database]",
+    "recipe[vps::monit]"
+      
+  ],
+  "group" :"web",
+  "app": {
+    "name": "rails_template"
+  },
+
+  "monit" : {
+     "notify_email"     : "user@example.com",
+     "poll_period"      : "60",
+     "poll_start_delay" : "120",
+     "address" : "162.243.160.131",
+     "allow" : ["0.0.0.0/0.0.0.0"],
+     "unicorn": {"pid_dir": "/home/deploy/rails_template/shared/tmp/pids"},
+     "resque": {
+        "app_root": "/home/deploy/rails_template/current",
+        "queues":[{"queue_list":["*"], "worker_count":1}]
+      },
+      "postgres" : {"pid_file": "/var/run/postgresql/9.3-main.pid"}
+   },
+  "rvm" : {
+    "user_installs": [
+      {
+        "user"         : "deploy",
+        "default_ruby" : "ruby-2.1.3"
+      }
+    ]
+  }  
+}

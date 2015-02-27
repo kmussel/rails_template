@@ -1,0 +1,21 @@
+# site :opscode
+source "https://supermarket.chef.io"
+
+
+cookbook 'apt'
+cookbook 'build-essential'
+cookbook 'runit'
+cookbook 'monit'
+cookbook 'ohai'
+cookbook 'git'
+cookbook 'nodejs'
+cookbook 'openssh'
+cookbook 'openssl'
+cookbook 'unicorn'
+cookbook 'group'  
+cookbook 'user'
+cookbook 'nginx'
+cookbook 'postgresql', git: 'git@github.com:hw-cookbooks/postgresql.git'  
+cookbook 'database'
+cookbook 'redis'
+cookbook 'rvm'
